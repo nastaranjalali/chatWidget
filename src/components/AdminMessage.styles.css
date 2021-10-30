@@ -1,0 +1,19 @@
+.AdminMessageContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  margin: 10px 0;
+}
+.adminMessage {
+  color: rgb(36, 36, 36);
+  font-family: "Open Sans", sans-serif;
+}
+.Adminblock {
+  width: auto;
+  background-color: #81d1db;
+  text-align: left;
+  margin-left: 10px;
+  border-radius: 8px;
+  padding: 0 25px;
+}

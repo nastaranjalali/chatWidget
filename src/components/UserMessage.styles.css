@@ -1,0 +1,18 @@
+.userMessageContainer {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+.userMessage {
+  color: rgb(36, 36, 36);
+  font-family: "Open Sans", sans-serif;
+}
+
+.userBlock {
+  width: auto;
+  background-color: rgb(214, 214, 214);
+  text-align: right;
+  margin-right: 10px;
+  border-radius: 8px;
+  padding: 0 25px;
+}
