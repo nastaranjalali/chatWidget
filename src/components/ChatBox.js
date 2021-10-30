@@ -2,6 +2,7 @@ import React from "react";
 import AdminMessage from "./AdminMessage";
 import "./ChatBox.styles.css";
 import UserMessage from "./UserMessage";
+import SendIcon from "../assets/icons/sendIcon.png";
 
 export default function ChatBox({ isComponentVisible }) {
   return (
@@ -13,11 +14,9 @@ export default function ChatBox({ isComponentVisible }) {
         </div>
         <div className="inputContainer">
           <input type="text" className="chatInput" />
-          <button
-            type="submit"
-            className="button"
-            onClick={handleClick}
-          ></button>
+          <button type="submit" className="sendButton">
+            <img src={SendIcon} className="sendIcon" />
+          </button>
         </div>
       </div>
     )

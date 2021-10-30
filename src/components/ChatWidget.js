@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 
 import "./chatwidget.styles.css";
 import { ReactComponent as Icon } from "../assets/icons/chat.svg";
