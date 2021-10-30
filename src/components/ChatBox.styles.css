@@ -20,6 +20,13 @@
   bottom: 0px;
   right: 0px;
 }
+.message {
+  position: absolute;
+  bottom: 80px;
+  height: 310px;
+  overflow: auto;
+  padding: 0 10px;
+}
 .chatInput {
   width: 70%;
   border: none;
