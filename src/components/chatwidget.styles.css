@@ -17,11 +17,13 @@
   background-color: #61dafb;
   border: none;
   transition: 400ms;
+  margin-top: 3px;
 }
 .button:hover {
   background-color: #3dd1fa;
   width: 83px;
   height: 83px;
+  margin-top: 0;
 }
 .icon {
   width: 65%;
