@@ -3,22 +3,35 @@
   height: 400px;
   background-color: #ffffff;
   border-radius: 20px;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 
+  border-bottom-left-radius: 60px;
+  box-shadow: -0.76px 0.7px 0.5px rgba(0, 0, 0, 0.555),
+    -0.76px -0.7px 0.5px rgba(0, 0, 0, 0.555);
   position: relative;
-  right: 40px;
+  right: 50px;
+}
+.containerChat::before {
+  content: "";
+  width: 40px;
+  height: 420px;
+  position: absolute;
+  border-top-right-radius: 20px;
+
+  bottom: -20px;
+  right: -13px;
+  box-shadow: 1px -1px 0px rgba(0, 0, 0, 0.555);
 }
 .containerChat::after {
   content: "";
-  width: 340px;
+  width: 40px;
   height: 20px;
-  border-top-right-radius: 20px;
-
-  background-color: #282c34;
+  border-top-right-radius: 30px;
   position: absolute;
-  bottom: 0px;
-  right: 0px;
+  bottom: -20px;
+  right: -13px;
+  box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.555);
 }
 .message {
   position: absolute;
