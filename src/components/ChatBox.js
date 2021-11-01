@@ -19,6 +19,7 @@ export default function ChatBox({ isComponentVisible }) {
         </div>
       )
     );
+    setInputMessage("");
   };
 
   const AlwaysScrollToBottom = () => {
@@ -42,6 +43,7 @@ export default function ChatBox({ isComponentVisible }) {
               className="chatInput"
               value={InputMessage}
               onChange={(e) => setInputMessage(e.target.value)}
+              name="message"
             />
             <button type="submit" className="sendButton" onClick={sendMessage}>
               <img src={SendIcon} className="sendIcon" alt="ss" />
