@@ -40,27 +40,30 @@
   overflow: auto;
   padding: 0 10px;
 }
-.chatInput {
-  width: 70%;
-  border: none;
-  border: 2px solid rgba(236, 236, 236, 0.829);
-  border-bottom: 2px solid #282c34;
-
-  height: 40px;
-  margin-right: 5px;
-}
-.inputContainer {
+.form {
   width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: row;
   position: absolute;
   bottom: 30px;
+  right: -20px;
+}
+.chatInput {
+  width: 70%;
+  border: none;
+  border: 2px solid rgba(236, 236, 236, 0.829);
+  border-bottom: 2px solid #282c344b;
+  height: 40px;
+  margin-right: 5px;
+}
+.inputContainer {
 }
 .sendButton {
   border-radius: 50%;
   width: 50px;
   border: 2px solid rgba(236, 236, 236, 0.829);
+  margin-left: 5px;
 }
 
 .sendButton img {

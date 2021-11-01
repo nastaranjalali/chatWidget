@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import AdminMessage from "./AdminMessage";
 import "./ChatBox.styles.css";
 import UserMessage from "./UserMessage";
@@ -9,7 +9,8 @@ export default function ChatBox({ isComponentVisible }) {
   const [chatList, setChatList] = useState([]);
   var [InputMessage, setInputMessage] = useState("");
 
-  const sendMessage = () => {
+  const sendMessage = (e) => {
+    e.preventDefault();
     setChatList(
       chatList.concat(
         <div key={chatList.length}>
@@ -20,25 +21,32 @@ export default function ChatBox({ isComponentVisible }) {
     );
   };
 
+  const AlwaysScrollToBottom = () => {
+    const elementRef = useRef();
+    useEffect(() => elementRef.current.scrollIntoView());
+    return <div ref={elementRef} />;
+  };
   return (
     isComponentVisible && (
       <div onBlur={(e) => e.stopPropagation} className="containerChat">
         <div className="message">
           <AdminMessage message="hi this is admin how can I help you?" />
           {chatList}
-          {}
+          <AlwaysScrollToBottom />
         </div>
         <div className="inputContainer">
-          <input
-            required
-            type="text"
-            className="chatInput"
-            value={InputMessage}
-            onChange={(e) => setInputMessage(e.target.value)}
-          />
-          <button type="submit" className="sendButton" onClick={sendMessage}>
-            <img src={SendIcon} className="sendIcon" alt="ss" />
-          </button>
+          <form className="form">
+            <input
+              required
+              type="text"
+              className="chatInput"
+              value={InputMessage}
+              onChange={(e) => setInputMessage(e.target.value)}
+            />
+            <button type="submit" className="sendButton" onClick={sendMessage}>
+              <img src={SendIcon} className="sendIcon" alt="ss" />
+            </button>
+          </form>
         </div>
       </div>
     )
