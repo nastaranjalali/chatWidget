@@ -44,6 +44,7 @@ export default function ChatBox({ isComponentVisible }) {
               value={InputMessage}
               onChange={(e) => setInputMessage(e.target.value)}
               name="message"
+              placeholder="Type your message here ..."
             />
             <button type="submit" className="sendButton" onClick={sendMessage}>
               <img src={SendIcon} className="sendIcon" alt="ss" />
