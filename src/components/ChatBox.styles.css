@@ -18,9 +18,8 @@
   height: 420px;
   position: absolute;
   border-top-right-radius: 20px;
-
   bottom: -20px;
-  right: -13px;
+  right: -14px;
   box-shadow: 1px -1px 0px rgba(0, 0, 0, 0.555);
 }
 .containerChat::after {
@@ -30,8 +29,8 @@
   border-top-right-radius: 30px;
   position: absolute;
   bottom: -20px;
-  right: -13px;
-  box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.555);
+  right: -14px;
+  box-shadow: 1px -0.1px 0px rgba(0, 0, 0, 0.555);
 }
 .message {
   position: absolute;
@@ -39,6 +38,19 @@
   height: 310px;
   overflow: auto;
   padding: 0 10px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  background-color: rgba(0, 0, 0, 0.075);
+  width: 7px;
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #81d1db;
+  border-radius: 10px;
 }
 .form {
   width: 100%;
